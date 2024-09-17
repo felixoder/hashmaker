@@ -1,6 +1,6 @@
 "use client";
 import { createHash } from "crypto";
-import Image from "next/image";
+
 import { useState } from "react";
 
 export default function Home() {
