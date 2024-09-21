@@ -1,14 +1,14 @@
 "use client";
-import { createHash } from "crypto";
+
 
 import { useState } from "react";
-
+import { SHA256 } from "felixhash";
 export default function Home() {
 
   const [inputValue, setInputValue] = useState("")
   const[hashedValue, setHashedValue] = useState("")
   function formHash(string: string){
-    return createHash("sha256").update(string).digest("hex")
+   return SHA256.hash(string)
   }
 
 
@@ -32,6 +32,7 @@ export default function Home() {
   return (
     
    <div className="flex flex-col px-10 py-10 gap-5 ">
+   <h1 className="text-center font-bold underline">This is the Implementation of SHA256 by FelixHash</h1>
     <input 
     type="text"
     id="input"
@@ -52,6 +53,8 @@ export default function Home() {
     
     
     />
+      <h1 className="text-center font-bold underline">This is the Implementation of Keccak256 by FelixHash</h1>
+      <p className="text-red-600 text-center">We are working on it!</p>
 
 
 
